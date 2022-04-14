@@ -12,7 +12,7 @@ export default function App() {
     real = parseFloat(real)
     cotDollar = parseFloat(cotDollar)
     total = real /cotDollar
-    alert(`Você tem ${total}$ dólares`)
+    alert(`Você tem ${total.toFixed(2)}$ dólares`)
   }
 
 
@@ -26,7 +26,7 @@ export default function App() {
 
      <TextInput placeholder= 'Digite a cotação do dólar' style={styles.campo} onChangeText={(cotDollar) => setCotDollar(cotDollar)} />
 
-     <TextInput placeholder= 'Digite a quantia de reais' style={styles.campo} onChangeText={(real) => setReal(real)} />
+     <TextInput placeholder= 'Digite a quantia de reais' style={styles.campo} onChangeText={(real) => setReal(real)} keyboardType='numeric' />
 
      <TouchableOpacity style={styles.botao} onPress={converter}>
        <Text style={styles.botao}>Converter</Text>
